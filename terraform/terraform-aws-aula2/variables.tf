@@ -33,12 +33,6 @@ variable "public_key_path" {
   default = "~/.ssh/id_rsa.pub"
 }
 
-#variable "user_data" {
-#  description = "instalações padrão"
-#  type = string
-#  default = "files/userdata.sh.tpl"
-#}
-
 /***********************
  * AMI dinâmica (Ubuntu)
  ***********************/
