@@ -3,7 +3,7 @@ resource "aws_instance" "vini-server" {
   instance_type = var.instance_type
   security_groups = [aws_security_group.allow_ssh_http.name]
 
-  key_name = aws_key_pair.vini-key.key_name
+  key_name = aws_key_pair.vini-key.key_name # Substitua pela sua Chava ssh em key_pair
 
   user_data = data.template_file.userdata.rendered
   user_data_replace_on_change = true
