@@ -5,6 +5,9 @@ resource "aws_instance" "vini-server" {
 
   key_name = aws_key_pair.vini-key.key_name
 
+  #user_data = var.user_data
+  depends_on = [ data.template_file.userdata ]
+
   tags = {
     Name = var.instance_name
   }
