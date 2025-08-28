@@ -27,3 +27,8 @@ output "security_group_id" {
   description = "id do SG"
   value = aws_security_group.allow_ssh_http
 }
+
+output "userdata" {
+  description = "file userdata"
+  value = data.template_file.userdata
+}
